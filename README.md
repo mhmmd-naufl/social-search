@@ -1,6 +1,6 @@
 
 
-### 2. Setup Backend (FastAPI)
+### 1. Setup Backend (FastAPI)
 ```bash
 cd backend
 python -m venv venv
@@ -8,13 +8,13 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 3. Setup Frontend (React + Tailwind)
+### 2. Setup Frontend (React + Tailwind)
 ```bash
 cd ../frontend
 npm install
 ```
 
-### 4. Jalankan Proyek
+### 3. Jalankan Proyek
 
 #### Opsi 1: Otomatis via script
 ```bash
