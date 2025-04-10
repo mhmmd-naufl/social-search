@@ -1,46 +1,69 @@
-# 📊 Social Search Engine (Mock Version)
 
-A simple fullstack project using **FastAPI** and **React + Vite** to simulate a social media search engine with sentiment analysis based on mock TikTok data.
 
-## Features
-- 🔍 Search content based on keyword
-- 📎 Show dummy links to TikTok content
-- 💬 Analyze comments into positive / neutral / negative sentiment
-- ⚡ Built with FastAPI (backend) and React + Tailwind + Vite (frontend)
-
-## How to Run
-
-### 1. Backend
+### 2. Setup Backend (FastAPI)
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn main:app --reload
 ```
 
-### 2. Frontend
+### 3. Setup Frontend (React + Tailwind)
 ```bash
-cd frontend
+cd ../frontend
 npm install
-npm run dev
 ```
 
-## API
-```
-GET /search?keyword=sepatu&platform=tiktok
-```
-Returns mocked search results and sentiment analysis.
+### 4. Jalankan Proyek
 
-## Todo / Enhancement Ideas
-- Integrate real TikTok API or scraping
-- Add Instagram / Facebook platform
-- Filter results by sentiment
-- Pagination and better UI polish
+#### Opsi 1: Otomatis via script
+```bash
+cd ..
+run_project.bat
+```
+
+#### Opsi 2: Manual
+- **Terminal 1 (backend)**
+  ```bash
+  cd backend
+  venv\Scripts\activate
+  uvicorn main:app --reload
+  ```
+- **Terminal 2 (frontend)**
+  ```bash
+  cd frontend
+  npm run dev
+  ```
+
+### 5. Akses di Browser
+Buka: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## Author
-[@mhmmd-naufl](https://github.com/mhmmd-naufl)
+## 📝 Struktur Folder
+```
+social_search/
+├── backend/
+│   ├── main.py
+│   ├── sentiment_analysis.py
+│   ├── requirements.txt
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   └── src/
+│       ├── App.tsx
+│       ├── main.tsx
+│       └── index.css
+├── run_project.bat
+```
+
+---
+
+## 📌 Catatan
+- Pastikan `Node.js`, `npm`, dan `Python 3.x` sudah terinstall.
+- Proyek ini masih menggunakan **dummy data** untuk hasil pencarian.
+- Fitur scraping & TikTok API masih dalam pengembangan.
 
 ---
